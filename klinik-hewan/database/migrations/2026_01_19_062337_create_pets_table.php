@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('jenis');
             $table->integer('usia');
             $table->double('berat');
+            $table->foreignId('owner_id')->constrained('owners')->cascadeOnDelete();
             $table->timestamps();
         });
     }

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('checkups', function (Blueprint $table) {
             $table->id();
             $table->text('catatan_pemeriksaan');
+            $table->foreignId('tratement_id')->constrained('tratements')->cascadeOnDelete();
             $table->timestamps();
         });
     }

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('tratements', function (Blueprint $table) {
             $table->id();
             $table->enum('jenis_perawatan', ['vaksin','grooming','pemeriksaan']);
+            $table->foreignId('pet_id')->constrained('pets')->cascadeOnDelete();
             $table->timestamps();
         });
     }
