@@ -18,7 +18,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/treatments" class="nav-link text-white">
+            <a href="/treatements" class="nav-link text-white {{ Request::is("treatements*") ? "bg-primary rounded" : "" }}">
                 Treatments
             </a>
         </li>

@@ -13,7 +13,7 @@ class Treatement extends Model
         'pet_id',
     ];
 
-    public function pet()
+public function pet()
     {
         return $this->belongsTo(Pet::class,'pet_id');
     }

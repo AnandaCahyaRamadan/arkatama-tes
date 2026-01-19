@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\PetController;
+use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\TreatementController;
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -15,6 +16,6 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('aut
 Route::middleware('auth')->group(function () {
     Route::resource('owners', OwnerController::class);
     Route::resource('pets', PetController::class);
-
+    Route::resource('treatements', TreatementController::class);
 });
 
