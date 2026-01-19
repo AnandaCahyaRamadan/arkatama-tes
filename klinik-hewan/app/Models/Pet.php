@@ -13,6 +13,7 @@ class Pet extends Model
         'jenis',
         'usia',
         'berat',
+        'kode_hewan',
         'owner_id',
     ];
 

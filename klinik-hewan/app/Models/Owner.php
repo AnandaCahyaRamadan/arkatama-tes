@@ -11,6 +11,7 @@ class Owner extends Model
 
     protected $fillable = [
         'name',
+        'phone_verified'
     ];
 
     public function pets()

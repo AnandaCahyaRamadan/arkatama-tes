@@ -1,0 +1,26 @@
+<div class="sidebar bg-dark text-white p-3" style="width:250px">
+    <h5 class="text-center mb-4">Admin Klinik Hewan</h5>
+
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a href="/dashboard" class="nav-link text-white {{ Request::is("dashboard") ? "bg-primary rounded" : "" }}">
+                Dashboard
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/owners" class="nav-link text-white {{ Request::is("owners*") ? "bg-primary rounded" : "" }}">
+                Owner
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/pets" class="nav-link text-white">
+                Pets
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/treatments" class="nav-link text-white">
+                Treatments
+            </a>
+        </li>
+    </ul>
+</div>
